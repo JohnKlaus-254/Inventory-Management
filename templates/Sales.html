@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+<title>{% block title %}sales{% endblock %}</title>
+
+{% block content %}
+
+ <br>
+
+   <div class="d-flex justify-content-center">
+     <h1>You are now viewings sales for {{ name }} Inventory </h1>
+   </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+
+            <th scope="col">ID</th>
+            <th scope="col">QUANTITY</th>
+            <th scope="col">DATE</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for sale in sales %}
+        <tr>
+            <th scope="row">{{ sale.s_id }}</th>
+            <td>{{ sale.s_qty }}</td>
+            <td>{{ sale.time_created }}</td>
+
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}

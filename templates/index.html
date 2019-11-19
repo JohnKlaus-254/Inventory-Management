@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}home{% endblock %}#}
+{#{% block styles %}#}
+{#<link rel="stylesheet" href="/static/css/main.css">#}
+{#{% endblock %}
+ where you have your own css#}
+
+
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">NCK Inventory Management</h1>
+            <p class="lead">Order away any product or service on our company list. We offer free delivery.</p>
+        </div>
+    </div>
+
+    <div class="container" align="left">
+        <embed type="image/svg+xml" src={{ graph_data|safe }} style='max-width:500px'/>
+    </div>
+
+    <div class="container" align="left">
+        <embed type="image/svg+xml" src={{ line_data|safe }} style='max-width:1000px'/>
+    </div>
+
+    <div class="container" align="left">
+        <embed type="image/svg+xml" src={{ linec|safe }} style='max-width:1000px'/>
+    </div>
+
+
+
+{% endblock %}
+
+
